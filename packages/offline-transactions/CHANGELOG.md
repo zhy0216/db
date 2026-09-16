@@ -1,5 +1,16 @@
 # @tanstack/offline-transactions
 
+## 1.0.57
+
+### Patch Changes
+
+- Fence each successful outbox clear deletion from overlapping reads, including when another deletion is still pending or fails. ([#1836](https://github.com/TanStack/db/pull/1836))
+
+- Preserve only captured accepted local inserts across a truncate. Preserve sparse-array length and RegExp state through ordered-query hashing, including hosts without a global File constructor. Prevent delayed replay reads from rerunning any transaction removed while the read was in flight, without rescanning the outbox. ([#1822](https://github.com/TanStack/db/pull/1822))
+
+- Updated dependencies [[`3ad64a4`](https://github.com/TanStack/db/commit/3ad64a42a0088e1272176fb33c953526fed9b868)]:
+  - @tanstack/db@0.9.3
+
 ## 1.0.56
 
 ### Patch Changes

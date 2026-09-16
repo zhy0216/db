@@ -1,5 +1,18 @@
 # @tanstack/query-db-collection
 
+## 1.2.16
+
+### Patch Changes
+
+- Add `createCursorPager` to fulfill offset/limit requests from endpoints with opaque continuation tokens. Reuse fresh backend pages through the existing QueryClient, with Query-managed expiry, invalidation and garbage collection, while retaining the existing UI peek-ahead behavior. ([#1824](https://github.com/TanStack/db/pull/1824))
+
+  Keep manual raw-row writes from overwriting other cache formats or marking them fresh. Preserve wrapped-response writes and seeding of empty row caches.
+
+- Keep on-demand Query cache ownership and post-write readiness isolated across collections, co-owners, deferred cleanup, errors, and custom query hashes. Active enabled scopes revalidate from post-write provider results, while inactive collection-owned entries are removed without disturbing unrelated or foreign-observed Queries. ([#1826](https://github.com/TanStack/db/pull/1826))
+
+- Updated dependencies [[`3ad64a4`](https://github.com/TanStack/db/commit/3ad64a42a0088e1272176fb33c953526fed9b868)]:
+  - @tanstack/db@0.9.3
+
 ## 1.2.15
 
 ### Patch Changes

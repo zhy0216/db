@@ -1,5 +1,14 @@
 # @tanstack/react-db
 
+## 0.2.46
+
+### Patch Changes
+
+- Keep Solid live-query rows tied to their result identities when custom-key rows ([#1825](https://github.com/TanStack/db/pull/1825))
+  reorder or multiple results share the same public `$key`.
+- Updated dependencies [[`3ad64a4`](https://github.com/TanStack/db/commit/3ad64a42a0088e1272176fb33c953526fed9b868)]:
+  - @tanstack/db@0.9.3
+
 ## 0.2.45
 
 ### Patch Changes
